@@ -1,15 +1,12 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { saveCard } from "../JS/card";
+
 
 const Single = () => {
   const single = useLoaderData();
   const { id } = useParams();
   const card = single.find((card) => card.id == id);
 
-  const click=cardId =>{
-    const clickedCard = single.find((c) => c.id == cardId);
-    saveCard(clickedCard)
-  }
+  
 
   return (
     <div className="container mt-10 mx-auto">
@@ -46,7 +43,7 @@ const Single = () => {
                 <p>Rating: <span className="text-xl font-bold">{card.rating}</span></p>
               </div>
               <div className="flex gap-4">
-                <p onClick={()=>click(card)} className="btn btn-outline btn-primary">Read</p>
+                <p className="btn btn-outline btn-primary">Read</p>
                 <p className="btn btn-outline btn-accent">Wishlist</p>
               </div>
             </div>
