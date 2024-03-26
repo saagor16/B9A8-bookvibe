@@ -1,33 +1,38 @@
-const New = (cardId) => {
+/* eslint-disable react/prop-types */
+import { CiLocationOn } from "react-icons/ci";
+import { IoPeopleOutline } from "react-icons/io5";
+import { MdOutlineFindInPage } from "react-icons/md";
+const New = ({card}) => {
   return (
     <div>
-      <div>
-        <img
-          className="h-[200px] mt-10 ml-14 lg:w-[25%]"
-          src="../../public/banner.png"
-          alt=""
-        />
-      </div>
-      <div className="space-y-3 mb-5 mt-5">
-        <h3>{cardId.author}</h3>
-        <p>By : Awlad Hossain</p>
-        <div className="flex gap-5 items-center ">
-          <p className="">Tag</p>
-          <p className="badge badge-outline">#</p>
-          <p className="badge badge-outline">#</p>
-        </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 mt-10 w-full bg-gray-200 lg:h-[300px] rounded-2xl h-full">
         <div>
-          <p>Year of Publishing: 1924</p>
+          <img
+            className="h-[200px] mt-10 ml-36 lg:w-[25%]"
+            src={card.image}
+            alt=""
+          />
         </div>
-        <div className="flex justify-around">
-          <p>Publisher: Scribner</p>
-          <p>Page 192</p>
-        </div>
-        <hr />
-        <div className="flex justify-around">
-          <p>Category: Classic</p>
-          <p>Rating: 4.5</p>
-          <p>View Details</p>
+        <div className="space-y-3 mt-8 mb-5 mx-5 text-black">
+          <h3 className="text-2xl font-bold">{card.bookName}</h3>
+          <p className="font-bold">By : {card.author}</p>
+          <div className="flex gap-5 items-center ">
+            <p className="font-bold">Tag</p>
+            <p className="badge badge-outline text-[#23BE0A]">#{card.tags[0]}</p>
+            <p className="badge badge-outline text-[#23BE0A]">#{card.tags[1]}</p>
+            <p className="flex items-center gap-2"> <CiLocationOn />Year of Publishing:{card.yearOfPublishing} </p>
+          </div>
+         
+          <div className="flex space-x-6">
+            <p className="flex items-center gap-2"><IoPeopleOutline /> Publisher: {card.publisher}</p>
+            <p className="flex items-center gap-2"><MdOutlineFindInPage />Page:{card.totalPages}</p>
+          </div>
+          <hr  className=" h-0.5 border-none bg-black"/>
+          <div className="flex space-x-6">
+            <p className="badge badge-outline text-[#328EFF] bg-[#cad5e4]">Category: {card.category}</p>
+            <p className="badge badge-outline text-[#FFAC33] bg-[#e5dbcb]">Rating: {card.rating}</p>
+            <p className="btn btn-success">View Details</p>
+          </div>
         </div>
       </div>
     </div>

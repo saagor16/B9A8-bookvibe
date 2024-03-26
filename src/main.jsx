@@ -12,10 +12,12 @@ import Single from './section/Single';
 import Read from './pages/Read';
 import Wishlist from './pages/Wishlist';
 import { Toaster } from 'react-hot-toast'
+import Error from './Error/Error';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Fixed></Fixed>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
@@ -41,7 +43,7 @@ const router = createBrowserRouter([
           {
             index: true,
             element: <Read></Read>,
-            
+            loader:()=>(fetch('/public/data.json'))
           },
           {
             path: 'wishlist',

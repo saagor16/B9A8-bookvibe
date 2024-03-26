@@ -1,11 +1,23 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { saveCardApplication } from "../utility/localstore";
 
 
 const Single = () => {
+
   const single = useLoaderData();
   const { id } = useParams();
-  const card = single.find((card) => card.id == id);
+  const idInt = parseInt(id);
+  const card = single.find((card) => card.id == idInt);
 
+
+
+  const handleClick=()=>{
+    saveCardApplication(idInt);
+  }
+  
+
+
+ 
   
 
   return (
@@ -43,7 +55,7 @@ const Single = () => {
                 <p>Rating: <span className="text-xl font-bold">{card.rating}</span></p>
               </div>
               <div className="flex gap-4">
-                <p className="btn btn-outline btn-primary">Read</p>
+                <p onClick={handleClick} className="btn btn-outline btn-primary">Read</p>
                 <p className="btn btn-outline btn-accent">Wishlist</p>
               </div>
             </div>
