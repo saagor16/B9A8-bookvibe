@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { saveCardApplication } from "../utility/localstore";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { saveCardApplicationTwo } from "../utility/localstoretwo";
 
 const Single = () => {
 
@@ -14,6 +15,10 @@ const Single = () => {
 
   const handleClick=()=>{
     saveCardApplication(idInt);
+    toast('You have applied successfully');
+  }
+  const handleClickTwo=()=>{
+    saveCardApplicationTwo(idInt);
     toast('You have applied successfully');
   }
   
@@ -58,7 +63,7 @@ const Single = () => {
               </div>
               <div className="flex gap-4">
                 <p onClick={handleClick} className="btn btn-outline btn-primary">Read</p>
-                <p className="btn btn-outline btn-accent">Wishlist</p>
+                <p onClick={handleClickTwo} className="btn btn-outline btn-accent">Wishlist</p>
               </div>
             </div>
           </div>
