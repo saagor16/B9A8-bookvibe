@@ -11,6 +11,7 @@ import Fixed from './fixed/Fixed';
 import Single from './section/Single';
 import Read from './pages/Read';
 import Wishlist from './pages/Wishlist';
+import { Toaster } from 'react-hot-toast'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -55,6 +56,8 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+   
     <RouterProvider router={router} />
+    <Toaster />
   </React.StrictMode>,
 )

@@ -25,7 +25,7 @@ const Listed = () => {
             >
               <span>Wishlist Books</span>
             </Link>
-            </div>
+            </div><hr />
             <Outlet></Outlet>
         </div>
     );

@@ -29,7 +29,7 @@ const Navbar = () => {
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  isActive ? "text-primary font-bold" : "font-bold"
+                  isActive ? "text-primary font-bold btn" : "font-bold"
                 }
               >
                 Home
@@ -45,23 +45,25 @@ const Navbar = () => {
               <NavLink
                 to="/pagesread"
                 className={({ isActive }) =>
-                  isActive ? "text-primary font-bold" : "font-bold"
+                  isActive ? "text-primary font-bold " : "font-bold"
                 }
               >
                 Pages to Read
               </NavLink>
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost text-xl">
-            bookshop
+          <Link to="/" className="btn btn-ghost text-lg lg:text-2xl">
+          OnBooks
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 gap-5">
+          <ul className="menu menu-horizontal px-1 gap-5 text-center">
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? "text-primary font-bold" : "font-bold"
+                isActive
+                  ? "text-primary font-bold btn btn-outline "
+                  : "font-bold"
               }
             >
               Home
@@ -69,7 +71,9 @@ const Navbar = () => {
             <NavLink
               to="/listedbook"
               className={({ isActive }) =>
-                isActive ? "text-primary font-bold " : "font-bold"
+                isActive
+                  ? "text-primary font-bold btn btn-outline "
+                  : "font-bold"
               }
             >
               Listed Books
@@ -77,16 +81,18 @@ const Navbar = () => {
             <NavLink
               to="/pagesread"
               className={({ isActive }) =>
-                isActive ? "text-primary font-bold" : "font-bold"
+                isActive
+                  ? "text-primary font-bold btn btn-outline "
+                  : "font-bold"
               }
             >
               Pages to Read
             </NavLink>
           </ul>
         </div>
-        <div className="navbar-end gap-4">
-          <a className="btn">Sign In</a>
-          <a className="btn">Sign Up</a>
+        <div className="navbar-end lg:gap-4 gap-1 ">
+          <button className="btn btn-success">Sign In</button>
+          <button className="btn btn-info">Sign Up</button>
         </div>
       </div>
     </div>
