@@ -29,6 +29,7 @@ const Wishlist = () => {
         appliedCardsTwo.map(cardTwo=> <NewTwo key={cardTwo.id} cardTwo={cardTwo}></NewTwo>)
       }
     </div>
+   
   );
 };
 

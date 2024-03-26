@@ -22,11 +22,6 @@ const Single = () => {
     toast('You have applied successfully');
   }
   
-
-
- 
-  
-
   return (
     <div className="container mt-10 mx-auto">
   
