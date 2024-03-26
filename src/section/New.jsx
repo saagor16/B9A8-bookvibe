@@ -28,7 +28,7 @@ const New = ({card}) => {
             <p className="flex items-center gap-2"><MdOutlineFindInPage />Page:{card.totalPages}</p>
           </div>
           <hr  className=" h-0.5 border-none bg-black"/>
-          <div className="flex space-x-6">
+          <div className="flex space-x-6 items-center">
             <p className="badge badge-outline text-[#328EFF] bg-[#cad5e4]">Category: {card.category}</p>
             <p className="badge badge-outline text-[#FFAC33] bg-[#e5dbcb]">Rating: {card.rating}</p>
             <p className="btn btn-success">View Details</p>

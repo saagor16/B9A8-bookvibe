@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { saveCardApplication } from "../utility/localstore";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Single = () => {
 
@@ -13,6 +14,7 @@ const Single = () => {
 
   const handleClick=()=>{
     saveCardApplication(idInt);
+    toast('You have applied successfully');
   }
   
 
@@ -62,6 +64,7 @@ const Single = () => {
           </div>
         </div>
       </section>
+      <ToastContainer />
     </div>
   );
 };
