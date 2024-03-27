@@ -13,6 +13,8 @@ import Read from './pages/Read';
 import Wishlist from './pages/Wishlist';
 import Error from './Error/Error';
 import Review from './section/Review';
+import In from './pages/In';
+import Up from './pages/Up';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -56,7 +58,14 @@ const router = createBrowserRouter([
       {
         path: "/review",
         element:<Review></Review>,
-        loader:()=>(fetch('/public/data.json'))
+      },
+      {
+        path: "/in",
+        element:<In></In>,
+      },
+      {
+        path: "/up",
+        element:<Up></Up>,
       },
     ]
   },

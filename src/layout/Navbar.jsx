@@ -109,8 +109,8 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end lg:gap-4 gap-1 ">
-          <button className="btn btn-success">Sign In</button>
-          <button className="btn btn-info">Sign Up</button>
+          <Link to="/in" className="btn btn-success">Sign In</Link>
+          <Link to="/up" className="btn btn-info">Sign Up</Link>
         </div>
       </div>
     </div>
