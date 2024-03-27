@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const Home = () => {
   const [book, setBook] = useState([]);
   useEffect(() => {
-    fetch("/public/data.json")
+    fetch("./data.json")
       .then((res) => res.json())
       .then((data) => setBook(data));
   }, []);
