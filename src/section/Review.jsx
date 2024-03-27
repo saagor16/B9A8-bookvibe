@@ -43,7 +43,7 @@ const Review = () => {
             <input
               type="text"
               placeholder="Name"
-              className="input input-bordered w-full mb-5 bg-gray-800"
+              className="input input-bordered w-full mb-5 bg-gray-800 text-gray-100"
             />
             <textarea
               rows="3"
