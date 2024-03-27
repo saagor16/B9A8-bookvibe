@@ -12,6 +12,7 @@ import Single from './section/Single';
 import Read from './pages/Read';
 import Wishlist from './pages/Wishlist';
 import Error from './Error/Error';
+import Review from './section/Review';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -51,6 +52,11 @@ const router = createBrowserRouter([
             loader:()=>(fetch('/public/data.json'))
           },
         ]
+      },
+      {
+        path: "/review",
+        element:<Review></Review>,
+        loader:()=>(fetch('/public/data.json'))
       },
     ]
   },

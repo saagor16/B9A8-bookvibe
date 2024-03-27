@@ -2,6 +2,7 @@
 import { CiLocationOn } from "react-icons/ci";
 import { IoPeopleOutline } from "react-icons/io5";
 import { MdOutlineFindInPage } from "react-icons/md";
+import { Link } from "react-router-dom";
 const NewTwo = ({cardTwo}) => {
     return (
         <div>
@@ -31,7 +32,7 @@ const NewTwo = ({cardTwo}) => {
           <div className="flex space-x-6 items-center">
             <p className="badge badge-outline text-[#328EFF] bg-[#cad5e4]">Category: {cardTwo.category}</p>
             <p className="badge badge-outline text-[#FFAC33] bg-[#e5dbcb]">Rating: {cardTwo.rating}</p>
-            <p className="btn btn-success">View Details</p>
+            <Link to={`/single/${cardTwo.id}`} className="btn btn-success">View Details</Link>
           </div>
         </div>
       </div>

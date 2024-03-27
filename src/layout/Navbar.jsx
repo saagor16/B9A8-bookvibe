@@ -50,6 +50,14 @@ const Navbar = () => {
               >
                 Pages to Read
               </NavLink>
+              <NavLink
+                to="/review"
+                className={({ isActive }) =>
+                  isActive ? "text-primary font-bold " : "font-bold"
+                }
+              >
+                Review
+              </NavLink>
             </ul>
           </div>
           <Link to="/" className="btn btn-ghost text-lg lg:text-2xl">
@@ -87,6 +95,16 @@ const Navbar = () => {
               }
             >
               Pages to Read
+            </NavLink>
+            <NavLink
+              to="/review"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-primary font-bold btn btn-outline "
+                  : "font-bold"
+              }
+            >
+              Review
             </NavLink>
           </ul>
         </div>

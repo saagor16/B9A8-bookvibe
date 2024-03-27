@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import bannerImg from "../../public/banner.png";
 const Banner = () => {
   return (
@@ -14,7 +15,7 @@ const Banner = () => {
             Knowing where to buy books can be challenging. So, here are the best book review sites to help you avoid buying books that  regret reading.
             Books to freshen up your bookshelf
             </p>
-            <button className="btn btn-success">View The List</button>
+            <Link to="/listedbook"className="btn btn-success">View The List</Link>
           </div>
         </div>
       </div>

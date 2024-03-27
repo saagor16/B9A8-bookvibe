@@ -15,11 +15,11 @@ const Home = () => {
       <div className="mt-10">
         <Banner></Banner>
       </div>
-      <div className="text-center mt-5 text-4xl font-bold">
-        <h5>Books</h5>
+      <div className="text-center mt-10 text-4xl font-bold">
+        <h5>Books Items To All</h5>
       </div>
       <div className="mt-10">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8">
           {book.map((card) => (
             <Card key={card.id} card={card}></Card>
           ))}
