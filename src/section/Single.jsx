@@ -21,7 +21,7 @@ const Single = () => {
       toast('You have applied successfully');
       setReadClicked(true);
     } else {
-      toast('You have applied unsuccessfully');
+      toast.error('You have applied unsuccessfully');
     }
   }
   const handleClickTwo = () => {
@@ -31,10 +31,10 @@ const Single = () => {
         toast('You have applied successfully');
         setWishlistClicked(true);
       } else {
-        toast('You have applied unsuccessfully');
+        toast.error('You have applied unsuccessfully');
       }
     } else {
-      toast('You have applied unsuccessfully');
+      toast.error('You have applied unsuccessfully');
     }
   }
   
