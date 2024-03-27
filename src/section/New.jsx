@@ -17,11 +17,11 @@ const New = ({card}) => {
         <div className="space-y-3 mt-8 mb-5 mx-5 text-black">
           <h3 className="text-2xl font-bold">{card.bookName}</h3>
           <p className="font-bold">By : {card.author}</p>
-          <div className="flex gap-5 items-center ">
+          <div className="flex lg:gap-5 items-center ">
             <p className="font-bold">Tag</p>
             <p className="badge badge-outline text-[#23BE0A]">#{card.tags[0]}</p>
             <p className="badge badge-outline text-[#23BE0A]">#{card.tags[1]}</p>
-            <p className="flex items-center gap-2"> <CiLocationOn />Year of Publishing:{card.yearOfPublishing} </p>
+            <p className="flex  items-center gap-2"> <CiLocationOn />Year of Publishing:{card.yearOfPublishing} </p>
           </div>
          
           <div className="flex space-x-6">

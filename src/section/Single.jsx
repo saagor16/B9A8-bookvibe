@@ -23,9 +23,9 @@ const Single = () => {
   }
   
   return (
-    <div className="container mt-10 mx-auto">
+    <div className=" mt-10">
   
-      <section className="bg-gray-200 text-gray-100 space-y-3 lg:h-[720px] rounded-xl">
+      <section className="bg-gray-200 text-gray-100 space-y-3 lg:h-[720px] w-full rounded-xl">
         <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
           <div className="flex items-center justify-center lg:pt-32 lg:pl-16  h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
             <img

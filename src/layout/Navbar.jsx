@@ -29,7 +29,7 @@ const Navbar = () => {
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  isActive ? "text-primary font-bold btn" : "font-bold"
+                  isActive ? "text-primary font-bold" : "font-bold"
                 }
               >
                 Home
