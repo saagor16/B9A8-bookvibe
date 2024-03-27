@@ -58,6 +58,14 @@ const Navbar = () => {
               >
                 Review
               </NavLink>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? "text-primary font-bold " : "font-bold"
+                }
+              >
+             Contact
+              </NavLink>
             </ul>
           </div>
           <Link to="/" className="btn btn-ghost text-lg lg:text-2xl">
@@ -105,6 +113,16 @@ const Navbar = () => {
               }
             >
               Review
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-primary font-bold btn btn-outline "
+                  : "font-bold"
+              }
+            >
+             Contact
             </NavLink>
           </ul>
         </div>

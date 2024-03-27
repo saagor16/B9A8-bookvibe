@@ -8,7 +8,8 @@ const Single = () => {
 
   const single = useLoaderData();
   const { id } = useParams();
-  const idInt = parseInt(id);
+  const idInt = parseInt(id)
+;
   const card = single.find((card) => card.id == idInt);
 
 

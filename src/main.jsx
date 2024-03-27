@@ -15,6 +15,7 @@ import Error from './Error/Error';
 import Review from './section/Review';
 import In from './pages/In';
 import Up from './pages/Up';
+import Contact from './section/Contact';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: "/review",
         element:<Review></Review>,
+      },
+      {
+        path: "/contact",
+        element:<Contact></Contact>,
       },
       {
         path: "/in",

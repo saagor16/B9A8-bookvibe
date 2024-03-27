@@ -9,7 +9,7 @@ const NewTwo = ({cardTwo}) => {
             <div className="grid grid-cols-1 lg:grid-cols-2 mt-10 w-full bg-gray-200 lg:h-[300px] rounded-2xl h-full">
         <div>
           <img
-            className="h-[200px] mt-10 ml-36 lg:w-[25%]"
+            className="h-[200px] mt-10 ml-36  lg:w-[25%]"
             src={cardTwo.image}
             alt=""
           />
@@ -17,7 +17,7 @@ const NewTwo = ({cardTwo}) => {
         <div className="space-y-3 mt-8 mb-5 mx-5 text-black">
           <h3 className="text-2xl font-bold">{cardTwo.bookName}</h3>
           <p className="font-bold">By : {cardTwo.author}</p>
-          <div className="flex gap-5 items-center ">
+          <div className="flex lg:gap-5 items-center ">
             <p className="font-bold">Tag</p>
             <p className="badge badge-outline text-[#23BE0A]">#{cardTwo.tags[0]}</p>
             <p className="badge badge-outline text-[#23BE0A]">#{cardTwo.tags[1]}</p>

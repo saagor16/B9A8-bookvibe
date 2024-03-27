@@ -4,8 +4,8 @@ const ListedBooks = () => {
   return (
     <div className="container mx-auto">
       <div>
-        <div className="mt-5 bg-gray-400 h-10 ">
-          <h3 className="text-center pt-2">Books</h3>
+        <div className="mt-5 bg-gray-200 h-10 ">
+          <h3 className="text-center pt-2 font-bold text-xl">Books</h3>
         </div>
         <div>
           <div className="flex-none text-center mt-5">
