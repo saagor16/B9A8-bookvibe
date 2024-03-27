@@ -3,24 +3,39 @@ import { saveCardApplication } from "../utility/localstore";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { saveCardApplicationTwo } from "../utility/localstoretwo";
+import { useState } from "react";
 
 const Single = () => {
 
   const single = useLoaderData();
   const { id } = useParams();
-  const idInt = parseInt(id)
-;
+  const idInt = parseInt(id);
   const card = single.find((card) => card.id == idInt);
 
+  const [readClicked, setReadClicked] = useState(false);
+  const [wishlistClicked, setWishlistClicked] = useState(false);
 
-
-  const handleClick=()=>{
-    saveCardApplication(idInt);
-    toast('You have applied successfully');
+  const handleClick = () => {
+    if (!readClicked) {
+      saveCardApplication(idInt);
+      toast('You have applied successfully');
+      setReadClicked(true);
+    } else {
+      toast('You have applied unsuccessfully');
+    }
   }
-  const handleClickTwo=()=>{
-    saveCardApplicationTwo(idInt);
-    toast('You have applied successfully');
+  const handleClickTwo = () => {
+    if (!readClicked) {
+      if (!wishlistClicked) {
+        saveCardApplicationTwo(idInt);
+        toast('You have applied successfully');
+        setWishlistClicked(true);
+      } else {
+        toast('You have applied unsuccessfully');
+      }
+    } else {
+      toast('You have applied unsuccessfully');
+    }
   }
   
   return (
