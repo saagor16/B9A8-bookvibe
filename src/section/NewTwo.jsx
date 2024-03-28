@@ -19,8 +19,8 @@ const NewTwo = ({cardTwo}) => {
           <p className="font-bold">By : {cardTwo.author}</p>
           <div className="flex lg:gap-5 items-center ">
             <p className="font-bold">Tag</p>
-            <p className="badge badge-outline text-[#23BE0A]">#{cardTwo.tags[0]}</p>
-            <p className="badge badge-outline text-[#23BE0A]">#{cardTwo.tags[1]}</p>
+            <p className="badge badge-outline h-10 lg:h-5 text-[#23BE0A]">#{cardTwo.tags[0]}</p>
+            <p className="badge badge-outline h-10 lg:h-5 text-[#23BE0A]">#{cardTwo.tags[1]}</p>
             <p className="flex items-center gap-2"> <CiLocationOn />Year of Publishing:{cardTwo.yearOfPublishing} </p>
           </div>
          
@@ -30,8 +30,8 @@ const NewTwo = ({cardTwo}) => {
           </div>
           <hr  className=" h-0.5 border-none bg-black"/>
           <div className="flex space-x-6 items-center">
-            <p className="badge badge-outline text-[#328EFF] bg-[#cad5e4]">Category: {cardTwo.category}</p>
-            <p className="badge badge-outline text-[#FFAC33] bg-[#e5dbcb]">Rating: {cardTwo.rating}</p>
+            <p className="badge badge-outline h-10 lg:h-5 text-[#328EFF] bg-[#cad5e4]">Category: {cardTwo.category}</p>
+            <p className="badge badge-outline h-10 lg:h-5 text-[#FFAC33] bg-[#e5dbcb]">Rating: {cardTwo.rating}</p>
             <Link to={`/single/${cardTwo.id}`} className="btn btn-success">View Details</Link>
           </div>
         </div>
