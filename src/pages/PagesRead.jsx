@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 
@@ -11,7 +12,6 @@ const getPath = (x, y, width, height) => {
 };
 
 const TriangleBar = (props) => {
-  // eslint-disable-next-line react/prop-types
   const { fill, x, y, width, height } = props;
   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
 };
