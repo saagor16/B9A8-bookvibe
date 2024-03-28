@@ -68,7 +68,7 @@ const Navbar = () => {
               </NavLink>
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost text-lg lg:text-2xl">
+          <Link to="/" className="btn btn-ghost text-green-600 text-xl font-bold lg:text-4xl">
           OnBooks
           </Link>
         </div>
