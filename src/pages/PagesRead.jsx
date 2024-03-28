@@ -1,5 +1,5 @@
-import  { useState, useEffect } from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { useState, useEffect } from 'react';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
@@ -35,26 +35,21 @@ const PagesRead = () => {
 
   return (
     <div className="container mx-auto mt-20">
-      <BarChart
-        width={1320}
-        height={600}
-        data={data}
-        margin={{
-          top: 20,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="bookName" />
-        <YAxis />
-        <Bar dataKey="totalPages" shape={<TriangleBar />} label={{ position: 'top' }}>
-          {data.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
-          ))}
-        </Bar>
-      </BarChart>
+      <ResponsiveContainer width="100%" height={600}>
+        <BarChart
+          data={data}
+          margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="bookName" />
+          <YAxis />
+          <Bar dataKey="totalPages" shape={<TriangleBar />} label={{ position: 'top' }}>
+            {data.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+            ))}
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
     </div>
   );
 };
